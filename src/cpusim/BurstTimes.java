@@ -12,7 +12,7 @@ public class BurstTimes extends JPanel{
     public BurstTimes(){
         super();
         setLayout(null);
-        setBackground(Color.CYAN);
+        setBackground(honeyDew);
         setBounds(xPos,yPos,250,60);
         
         

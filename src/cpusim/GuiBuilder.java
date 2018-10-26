@@ -15,7 +15,7 @@ public class GuiBuilder extends JFrame implements ActionListener {
     public GuiBuilder(){
         super("CPU Scheduler");
         setLayout(null);
-        setSize(750, 464);
+        setSize(850, 525);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         
