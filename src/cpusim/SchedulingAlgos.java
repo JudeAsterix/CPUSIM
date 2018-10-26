@@ -34,7 +34,7 @@ public class SchedulingAlgos extends JPanel{
                                     "2. Shortest Job First (SJF)",
                                     "3. Shortest Remaining Time First (SRT)",
                                     "4. Round Robin (RR)",
-                                    "5. Priority Scehdule"};
+                                    "5. Priority Schedule"};
         JComboBox algosList = new JComboBox(schedulingAlgorithmsList);
         algosList.setBounds(xPos - 5, yPos, 250, 50);
         
