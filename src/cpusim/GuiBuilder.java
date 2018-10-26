@@ -11,12 +11,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class GuiBuilder extends JFrame implements ActionListener {
-    private final String[] algos = {"First Come First Serve (FCFS)",
-                                    "Shortest Job First (SJF)",
-                                    "Shortest Remaining Time First (SRT)",
-                                    "Round Robin (RR)",
-                                    "Priority Scehdule"};
-    
     
     public GuiBuilder(){
         super("CPU Scheduler");
@@ -26,6 +20,7 @@ public class GuiBuilder extends JFrame implements ActionListener {
         
         
         add(new SchedulingAlgos());
+        add(new Process());
         setVisible(true);
     }
     
