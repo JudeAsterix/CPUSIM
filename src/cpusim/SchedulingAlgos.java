@@ -11,11 +11,13 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class SchedulingAlgos extends JPanel implements ActionListener{
-       private int xPos = 12, yPos = 12;
+        private Color honeyDew = new Color(240,255,240);
+        private int xPos = 12, yPos = 12;
+       
     public SchedulingAlgos(){
         super();
         setLayout(null);
-        setBackground(Color.RED);
+        setBackground(honeyDew);
         
         setBounds(xPos,yPos,265,60);
         

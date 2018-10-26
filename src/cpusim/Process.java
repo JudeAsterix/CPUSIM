@@ -7,13 +7,14 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Process extends JPanel{
+        private Color honeyDew = new Color(240,255,240);  
+        private int xPos = 300, yPos = 12;
     
-    private int xPos = 300, yPos = 12;
     public Process(){
         super();
         setLayout(null);
-        setBackground(Color.BLUE);
-        setBounds(xPos,yPos,150,60);
+        setBackground(honeyDew);
+        setBounds(xPos-10,yPos,150,60);
         
         addNumberOfProcessesLabel();
         addNumberOfProcessesList();

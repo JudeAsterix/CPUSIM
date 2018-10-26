@@ -21,6 +21,7 @@ public class GuiBuilder extends JFrame implements ActionListener {
         
         add(new SchedulingAlgos());
         add(new Process());
+        add(new BurstTimes());
         setVisible(true);
     }
     
