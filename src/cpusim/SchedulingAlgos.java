@@ -1,35 +1,55 @@
 package cpusim;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
-public class SchedulingAlgos extends JPanel implements ActionListener{
-
+public class SchedulingAlgos extends JPanel{
+        private Color honeyDew = new Color(240,255,240);
+        private int xPos = 12, yPos = 12;
+       
     public SchedulingAlgos(){
         super();
         setLayout(null);
-        setBackground(Color.RED);
-        setVisible(true);
-        setBounds(10,10,200,70);
+        setBackground(honeyDew);
+        
+        setBounds(xPos,yPos,265,60);
         
         addSchedulingText();
-        
+        addSchedulingMenu();
+        setVisible(true);
     }
     
     public void addSchedulingText(){
         JLabel scheduling = new JLabel("Scheduling Algorithms");
-        scheduling.setBounds(5, -15, 200, 50);
+        scheduling.setBounds(xPos + 42, yPos - 25, 250, 50);
         add(scheduling);
     }
     
-    @Override
-    public void actionPerformed(ActionEvent e) {
+    public void addSchedulingMenu(){
+        String[] schedulingAlgorithmsList = {"1. First Come First Serve (FCFS)",
+                                    "2. Shortest Job First (SJF)",
+                                    "3. Shortest Remaining Time First (SRT)",
+                                    "4. Round Robin (RR)",
+                                    "5. Priority Schedule"};
+        JComboBox algosList = new JComboBox(schedulingAlgorithmsList);
+        algosList.setBounds(xPos - 5, yPos, 250, 50);
+        
+        algosList.addActionListener(new ScheduleList());
+        add(algosList);
+    }
+    
+    public class ScheduleList implements ActionListener {
+        private String algo;
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JComboBox cb = (JComboBox)e.getSource();
+            algo = (String)cb.getSelectedItem();
+            System.out.println(algo);
+        }
         
     }
     

@@ -11,21 +11,19 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class GuiBuilder extends JFrame implements ActionListener {
-    private final String[] algos = {"First Come First Serve (FCFS)",
-                                    "Shortest Job First (SJF)",
-                                    "Shortest Remaining Time First (SRT)",
-                                    "Round Robin (RR)",
-                                    "Priority Scehdule"};
-    
     
     public GuiBuilder(){
         super("CPU Scheduler");
         setLayout(null);
-        setSize(750, 464);
+        setSize(850, 525);
+        setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         
         add(new SchedulingAlgos());
+        add(new Process());
+        add(new BurstTimes());
+        add(new GanttChart());
         setVisible(true);
     }
     
