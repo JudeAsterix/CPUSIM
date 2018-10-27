@@ -16,12 +16,14 @@ public class GuiBuilder extends JFrame implements ActionListener {
         super("CPU Scheduler");
         setLayout(null);
         setSize(850, 525);
+        setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         
         add(new SchedulingAlgos());
         add(new Process());
         add(new BurstTimes());
+        add(new GanttChart());
         setVisible(true);
     }
     
