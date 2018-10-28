@@ -36,7 +36,7 @@ public class SchedulingAlgos extends JPanel{
                                     "4. Round Robin (RR)",
                                     "5. Priority Schedule"};
         JComboBox algosList = new JComboBox(schedulingAlgorithmsList);
-        algosList.setBounds(xPos - 5, yPos, 250, 50);
+        algosList.setBounds(xPos - 5, yPos + 10, 250, 50);
         
         algosList.addActionListener(new ScheduleList());
         add(algosList);
