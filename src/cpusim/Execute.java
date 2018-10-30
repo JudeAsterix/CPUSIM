@@ -7,12 +7,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class Execute extends JPanel{
+public class Execute extends JPanel {
         private Color honeyDew = new Color(240,255,240);  
         private int xPos = 730, yPos = 12;
         private Font font1 = new Font("SansSerif", Font.BOLD, 15);
-    
+        private int numberOfProcesses = 0;
+        //private JPanel exec;
+        
     public Execute(){
+        super();
         setLayout(null);
         setBackground(honeyDew);
         setBounds(xPos, yPos, 100,60);
@@ -20,6 +23,10 @@ public class Execute extends JPanel{
         displayExecuteButton();
         
         setVisible(true);
+    }
+    
+    public Execute(int a){
+        
     }
     
     public void displayExecuteButton(){
@@ -30,13 +37,17 @@ public class Execute extends JPanel{
         add(execute);
     }
     
+    public void setNumberOfProcesses(int numberOfProcesses){
+        this.numberOfProcesses = numberOfProcesses;
+    }
+    
     public class RunSimulation implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            
+            Process p = new Process(0);
             System.out.println(e.getActionCommand());
-            
+            System.out.println(numberOfProcesses);
         }
     }
 }
