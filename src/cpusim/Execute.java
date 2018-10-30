@@ -11,8 +11,6 @@ public class Execute extends JPanel {
         private Color honeyDew = new Color(240,255,240);  
         private int xPos = 730, yPos = 12;
         private Font font1 = new Font("SansSerif", Font.BOLD, 15);
-        private int numberOfProcesses = 0;
-        //private JPanel exec;
         
     public Execute(){
         super();
@@ -25,10 +23,6 @@ public class Execute extends JPanel {
         setVisible(true);
     }
     
-    public Execute(int a){
-        
-    }
-    
     public void displayExecuteButton(){
         JButton execute = new JButton("EXECUTE");
         execute.setBounds(xPos-725, yPos-5, 90, 50);
@@ -37,17 +31,12 @@ public class Execute extends JPanel {
         add(execute);
     }
     
-    public void setNumberOfProcesses(int numberOfProcesses){
-        this.numberOfProcesses = numberOfProcesses;
-    }
-    
     public class RunSimulation implements ActionListener{
-
         @Override
         public void actionPerformed(ActionEvent e) {
-            Process p = new Process(0);
+            SharedData x = new SharedData();
             System.out.println(e.getActionCommand());
-            System.out.println(numberOfProcesses);
+            System.out.println();
         }
     }
 }

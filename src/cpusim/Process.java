@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 public class Process extends JPanel {
         private Color honeyDew = new Color(240,255,240);
@@ -47,12 +46,18 @@ public class Process extends JPanel {
     }
     
     public class ProcessRun implements ActionListener{
+        private int numOfProcesses;
+        SharedData x;
         @Override
         public void actionPerformed(ActionEvent e) {
+            x = new SharedData();
             JComboBox cb = (JComboBox)e.getSource();
-            numOfProcess = (int)cb.getSelectedItem();
-        
+            numOfProcesses = (int)cb.getSelectedItem();
+            System.out.println(numOfProcesses);
+            x.setNumberOfProcesses(numOfProcesses);
         }   
+        
+        
     }
     
 }
