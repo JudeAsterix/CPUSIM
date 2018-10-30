@@ -24,7 +24,7 @@ public class GanttChart extends JPanel{
     
     public void addGanttChartLabel(){
         JLabel ganttLabel = new JLabel("Gantt Chart");
-        ganttLabel.setBounds(xPos+7, yPos - 333, 200, 30);
+        ganttLabel.setBounds(xPos+5, yPos - 338, 200, 30);
         ganttLabel.setFont(font1);
         add(ganttLabel);
     }
