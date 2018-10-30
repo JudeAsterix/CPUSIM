@@ -15,7 +15,7 @@ public class BurstTimes extends JPanel{
         super();
         setLayout(null);
         setBackground(honeyDew);
-        setBounds(xPos,yPos,295,60);
+        setBounds(xPos,yPos,257,60);
         
         
         addBurstTimes();
@@ -27,20 +27,20 @@ public class BurstTimes extends JPanel{
     
     public void addBurstTimes(){
         JLabel burstTimeStatement = new JLabel("Enter burst times for processes");
-        burstTimeStatement.setBounds(xPos-430, yPos-22, 250, 50);
+        burstTimeStatement.setBounds(xPos-450, yPos-22, 250, 50);
         burstTimeStatement.setFont(font1);
         add(burstTimeStatement);
     }
     
     public void addRandomButton(){
         JButton randomButton = new JButton("randomly");
-        randomButton.setBounds(xPos-440, yPos+14, 120, 30);
+        randomButton.setBounds(xPos-455, yPos+14, 120, 30);
         add(randomButton);
     }
     
     public void addManualButton(){
         JButton manualButton = new JButton("manually");
-        manualButton.setBounds(xPos - 300, yPos + 14, 120, 30);
+        manualButton.setBounds(xPos - 318, yPos + 14, 120, 30);
         add(manualButton);
     }
 }

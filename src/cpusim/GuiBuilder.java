@@ -24,6 +24,7 @@ public class GuiBuilder extends JFrame implements ActionListener {
         add(new Process());
         add(new BurstTimes());
         add(new GanttChart());
+        add(new Execute());
         setVisible(true);
     }
     
